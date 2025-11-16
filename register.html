@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Register - Garlickoe</title>
+  <link rel="icon" type="image/x-icon" href=".//assets/img/brand.png">
+  <!-- Feane CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* minor safe overrides for register card */
+    .conreg { max-width: 820px; margin: 36px auto; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.06); overflow:hidden; }
+    .conreg .left { padding:30px; background: url('images/hero-bg.jpg') center/cover no-repeat; color:#fff; min-height:250px; }
+    .conreg .right { padding:28px; }
+    .phone-row { display:flex; gap:8px; align-items:center; }
+    .prefix { padding:8px 12px; background:#f3f3f3; border:1px solid #ccc; border-radius:6px; font-weight:600; }
+    #phone_rest { flex:1; padding:8px; border-radius:6px; border:1px solid #ccc; }
+    .warning { font-size:13px; margin-top:6px; display:block; color:#c00; }
+    @media(max-width:768px){ .conreg { margin:16px; } .conreg .left{ display:none; } }
+  </style>
+</head>
+<body class="sub_page">
+
+  <!-- header -->
+  <div class="hero_area">
+    <div class="bg-box"><img src=".//assets/img/bawang tunggal product preview.jpg" alt=""></div>
+
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html"><span>Garlickoe</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation"><span class=""></span></button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="menu.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="book.html">Order</a></li>
+            </ul>
+            <div class="user_option">
+              <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
+              <a class="cart_link" href="transaksi.php"><i class="fa fa-shopping-cart"></i></a>
+              <a href="data.php" class="btn btn-sm btn-warning">Admin</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- register card -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="conreg d-flex align-items-stretch">
+        <div class="left col-md-5 d-none d-md-block">
+          <div style="padding:28px;">
+            <h2 style="color:#fff;">Daftar Akun Garlickoe</h2>
+            <p style="color:#fff;">Buat akun untuk memudahkan pembelian dan melihat riwayat transaksi.</p>
+          </div>
+        </div>
+
+        <div class="right col-md-7">
+          <h3>Register</h3>
+
+          <!-- IMPORTANT: action goes to register_aksi.php (do not change backend) -->
+          <form id="regForm" method="post" action="register_aksi.php" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-2">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required placeholder="email@contoh.com">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label>Nama Lengkap</label>
+                <input type="text" name="name" class="form-control" required placeholder="Nama Lengkap">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" required placeholder="Username">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" required placeholder="Password">
+              </div>
+
+              <div class="col-12 mb-2">
+                <label>Nomor Telepon</label>
+                <div class="phone-row">
+                  <div class="prefix">+62</div>
+                  <input id="phone_rest" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="15"
+                         placeholder="812345678" class="form-control" required>
+                </div>
+                <small id="phoneMsg" class="warning">Masukkan minimal 8 digit setelah normalisasi.</small>
+                <input type="hidden" id="phone" name="phone" value="">
+              </div>
+
+              <div class="col-12 mb-2">
+                <label>Alamat</label>
+                <input type="text" name="address" class="form-control" required placeholder="Alamat lengkap">
+              </div>
+
+              <div class="col-md-6 mb-2">
+                <label>Tanggal Lahir</label>
+                <input type="date" name="birth" class="form-control" required>
+              </div>
+
+            </div>
+
+            <div class="mt-3 d-flex justify-content-between align-items-center">
+              <small>Sudah punya akun? <a href="login.html">Login</a></small>
+              <button id="submitBtn" type="submit" class="btn btn-warning" disabled>Daftar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="footer-info">
+        <p>&copy; <span id="displayYear"></span> Garlickoe</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS - phone normalization -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    document.getElementById('displayYear').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+  (function(){
+    const MIN_DIGITS = 8;
+    const phoneRest = document.getElementById('phone_rest');
+    const phoneHidden = document.getElementById('phone');
+    const phoneMsg = document.getElementById('phoneMsg');
+    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('regForm');
+
+    function onlyDigits(s){ return s.replace(/\D+/g,''); }
+    function normalizePhoneRest(raw){
+      let rest = onlyDigits(raw || '');
+      if (/^0+/.test(rest)) rest = rest.replace(/^0+/, '');
+      return rest;
+    }
+
+    function validateAndUpdate(){
+      const raw = phoneRest.value || '';
+      phoneRest.value = onlyDigits(raw);
+      const normalized = normalizePhoneRest(phoneRest.value);
+      phoneHidden.value = normalized ? '+62' + normalized : '';
+
+      if (normalized.length >= MIN_DIGITS) {
+        phoneMsg.style.color = 'green';
+        phoneMsg.textContent = 'Nomor telepon valid ✓ (akan dikirim sebagai: ' + phoneHidden.value + ')';
+        return true;
+      } else {
+        phoneMsg.style.color = '#c00';
+        phoneMsg.textContent = 'Nomor telepon terlalu pendek. Minimal ' + MIN_DIGITS + ' digit setelah normalisasi.';
+        return false;
+      }
+    }
+
+    function refreshSubmit(){
+      const phoneOk = validateAndUpdate();
+      const htmlOk = form.checkValidity();
+      submitBtn.disabled = !(phoneOk && htmlOk);
+    }
+
+    phoneRest.addEventListener('input', refreshSubmit);
+    form.addEventListener('input', refreshSubmit);
+    refreshSubmit();
+
+    form.addEventListener('submit', function(e){
+      if (!validateAndUpdate() || !form.checkValidity()) {
+        e.preventDefault();
+        refreshSubmit();
+        return false;
+      }
+    });
+  })();
+  </script>
+
+</body>
+
+<footer class="footer_section">
+  <div class="container">
+    <div class="footer-info" style="text-align:center;">
+
+      <p style="margin-bottom: 6px;">
+        &copy; <span id="displayYear"></span> Garlickoe — All Rights Reserved
+      </p>
+
+      <p style="margin: 0; font-size: 15px; opacity: .85;">
+        Website dibuat oleh <b style="color:#f1c40f;">Jason Sieman</b><br>
+        Kelas <b>12.4</b>, Absen <b>16</b>, SMA Petra 1
+      </p>
+
+      <p style="margin-top: 8px; font-size: 14px; opacity: .8;">
+        Bahasa pemrograman: <span style="color:#f1c40f;">HTML • CSS • PHP • SQL</span>
+      </p>
+
+      <p style="margin-top: 10px;">
+        <a href="data.php" style="color:#f1c40f; text-decoration:none; font-weight:600;">
+          Lihat Detail Pembuat →
+        </a>
+      </p>
+
+    </div>
+  </div>
+</footer>
+
+</html>

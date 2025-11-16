@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Garlickoe</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href=".//assets/img/brand.png">
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src=".//assets/img/bawang tunggal product preview.jpg" alt="Garlickoe Hero"
+        onerror="this.src='images/about-img.png'">
+    </div>
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html"><span>Garlickoe</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class=""> </span></button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="menu.html">Products</a></li>
+              <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="book.html">Order</a></li>
+            </ul>
+            <div class="user_option">
+              <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
+              <a class="cart_link" href="transaksi.php">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+              <a href="data.php" class="btn btn-sm btn-warning">Admin</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/garlickoe-factory.jpg" alt="Pabrik Garlickoe"
+              onerror="this.src='.//assets/img/bawang kating packaging preview.jpg'">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container"><h2>Tentang Garlickoe</h2></div>
+            <p>
+              Garlickoe lahir dari kecintaan pada bawang dan cita rasa bawang hitam berkualitas. Kami fokus
+              pada fermentasi bawang hitam murni, produksi higienis, dengan misi menghadirkan rasa premium sekaligus
+              sehat. Produk kami terdiri dari bawang hitam tunggal, kating, varian kupas, dan paket hemat khusus.
+            </p>
+            <a href="menu.html">Lihat Produk Kami</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="detail-box">
+            <h5>Higienis</h5>
+            <p>Proses fermentasi dan pengemasan dijalankan di fasilitas bersih dan steril.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <h5>Rasa Original</h5>
+            <p>Kami mempertahankan rasa alami bawang hitam tanpa tambahan rasa sintetik.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <h5>Value untuk Semua</h5>
+            <p>Kami menawarkan ukuran paket kecil dan besar agar bisa diakses oleh semua konsumen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer_section">
+  <div class="container">
+    <div class="footer-info" style="text-align:center;">
+
+      <p style="margin-bottom: 6px;">
+        &copy; <span id="displayYear"></span> Garlickoe — All Rights Reserved
+      </p>
+
+      <p style="margin: 0; font-size: 15px; opacity: .85;">
+        Website dibuat oleh <b style="color:#f1c40f;">Jason Sieman</b><br>
+        Kelas <b>12.4</b>, Absen <b>16</b>, SMA Petra 1
+      </p>
+
+      <p style="margin-top: 8px; font-size: 14px; opacity: .8;">
+        Bahasa pemrograman: <span style="color:#f1c40f;">HTML • CSS • PHP • SQL</span>
+      </p>
+
+      <p style="margin-top: 10px;">
+        <a href="data.php" style="color:#f1c40f; text-decoration:none; font-weight:600;">
+          Lihat Detail Pembuat →
+        </a>
+      </p>
+
+    </div>
+  </div>
+</footer>
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>document.getElementById('displayYear').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
