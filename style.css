@@ -1,0 +1,6 @@
+/* assets/css/style.css - minimal overrides only; do not change Feane core files */
+#login_section .form-control,
+#register_section .form-control,
+#transaksi_form .form-control { border-radius: 6px; }
+.product-card .card { min-height: 100%; }
+.book_section .form-control { margin-bottom: .5rem; }
