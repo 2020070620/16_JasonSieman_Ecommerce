@@ -7,7 +7,7 @@ include "koneksi.php";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href=".//assets/img/brand.png">
+  <link rel="icon" type="image/x-icon" href=".//assets/img/brand.png">
 
   <title>Admin | Data Akun & Transaksi</title>
 
@@ -93,6 +93,19 @@ include "koneksi.php";
       background: rgba(255, 222, 150, 0.65);
     }
 
+    .btn-delete {
+      padding: 6px 12px;
+      background: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .btn-delete:hover {
+      background: #c0392b;
+    }
+
     @media (max-width: 768px) {
       table {
         font-size: 13px;
@@ -107,7 +120,7 @@ include "koneksi.php";
 
 <body class="sub_page">
 
-  <!-- NAVBAR FEANE ORI – TIDAK DIUBAH -->
+  <!-- NAVBAR FEANE ORIGINAL -->
   <div class="hero_area">
     <header class="header_section">
       <div class="container">
@@ -160,7 +173,7 @@ include "koneksi.php";
 
       <h1>📊 DATA PENGGUNA & TRANSAKSI</h1>
 
-      <!-- DATA AKUN -->
+      <!-- ===================== DATA AKUN ===================== -->
       <h2>📌 Data Akun Terdaftar</h2>
 
       <table>
@@ -172,6 +185,7 @@ include "koneksi.php";
             <th>Nama</th>
             <th>Phone</th>
             <th>Address</th>
+            <th>Aksi</th>
           </tr>
         </thead>
 
@@ -187,13 +201,21 @@ include "koneksi.php";
                   <td>{$row['name']}</td>
                   <td>{$row['phone']}</td>
                   <td>{$row['address']}</td>
+
+                  <td>
+                    <a href='delete_akun.php?id={$row['id']}'
+                       class='btn-delete'
+                       onclick=\"return confirm('Yakin ingin menghapus akun ini?');\">
+                       Delete
+                    </a>
+                  </td>
               </tr>";
           }
           ?>
         </tbody>
       </table>
 
-      <!-- DATA TRANSAKSI -->
+      <!-- ===================== DATA TRANSAKSI ===================== -->
       <h2>📌 Data Transaksi Masuk</h2>
 
       <table>
@@ -208,6 +230,7 @@ include "koneksi.php";
             <th>Total (Rp)</th>
             <th>Metode</th>
             <th>Tanggal</th>
+            <th>Aksi</th>
           </tr>
         </thead>
 
@@ -226,6 +249,14 @@ include "koneksi.php";
                   <td>" . number_format($t['total'], 0, ',', '.') . "</td>
                   <td>{$t['payment_method']}</td>
                   <td>{$t['tanggal']}</td>
+
+                  <td>
+                    <a href='delete_transaksi.php?transaksi_id={$t['transaksi_id']}'
+                       class='btn-delete'
+                       onclick=\"return confirm('Yakin ingin menghapus transaksi ini?');\">
+                       Delete
+                    </a>
+                  </td>
               </tr>";
           }
           ?>
