@@ -1,4 +1,4 @@
 MAAF FOTO GK BISA DI UOPLOAD SIZE BESAR
 
 FILE LENGKAP DAPAT DIAKSES DI LINK BERIKUT
-https://drive.google.com/drive/folders/1D3J01gXpSq8EyQkwFa6CkG0-c2vhTAb3?usp=sharing
+https://drive.google.com/file/d/1jhtHyfTzhAs-wTQi414MvIbWEJusaloZ/view?usp=drivesdk
